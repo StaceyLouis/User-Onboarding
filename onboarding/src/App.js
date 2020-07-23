@@ -12,9 +12,7 @@ const initialFormData ={
 name : '',
 email: "",
 password:'',
-terms:{
   terms: true
-}
 
 }
 const initialFormErrors = {
@@ -83,10 +81,9 @@ const changeOnInput = (name, value) =>{
 const changeOnCheck = (name, isChecked) => {
   setFormValues({
     ...originalFormValues,
-    terms:{
-      ...originalFormValues.terms,
+
       [name]: isChecked
-    }
+    
   })
 }
 
@@ -96,8 +93,8 @@ const newUser = {
   name: originalFormValues.name.trim(),
   email: originalFormValues.email.trim(),
   password: originalFormValues.password.trim(),
-  terms: Object.keys(originalFormValues.terms).filter(term => originalFormValues.terms[term]),
-  
+  //terms: Object.keys(originalFormValues.terms).filter(term => originalFormValues.terms[term]),
+  terms: originalFormValues.terms,
 }
 postUser(newUser);
 }
