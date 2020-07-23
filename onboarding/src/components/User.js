@@ -8,7 +8,7 @@ function User({ values }) {
 
   return (
     <div className='user-container'>
-      <h2>Name:{values.first_name, values.last_name || values.name}</h2>
+      <h2>Name:{values.first_name} {values.last_name}</h2>
       <p>Email: {values.email}</p>
       <p>Password: {values.password}</p>
     
